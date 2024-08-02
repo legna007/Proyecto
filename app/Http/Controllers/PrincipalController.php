@@ -6,10 +6,8 @@ use Illuminate\Http\Request;
 
 class PrincipalController extends Controller
 {
-    //
-
-    public function mostrarInicio(){
-        return "Hola mundo";
+    public function index(){
+        return view('Principal.home');
     }
 
 

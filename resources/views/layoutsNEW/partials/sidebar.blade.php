@@ -12,7 +12,7 @@
         <div class="sidebar-menu">
             <ul id="accordion-menu">
                 <li>
-                    <a href="{{ route('inicial') }}" class="dropdown-toggle no-arrow">
+                    <a href="{{ route('home') }}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-house"></span><span class="mtext">Inicio</span>
                     </a>
                 </li>

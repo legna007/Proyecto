@@ -9,6 +9,7 @@ use App\Http\Controllers\EmisorDestinatarioController;
 use App\Http\Controllers\ListaArchivoController;
 use App\Http\Controllers\PosicionEnArchivoController; 
 use App\Http\Controllers\ProcedenciaoDestinoController;
+use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\ProvinciaController;
 use App\Models\Archivos;
 use App\Models\Emisor_destinatarios;
@@ -18,14 +19,10 @@ use App\Models\Descripciones;
 use App\Models\Lista_archivo;
 use App\Models\Procedencia;
 
-Route::get('/', function () {
 
- //return Archivos::find('10346')->archivosDesdeProcedencia_destino;
-//return Archivos::find('10112')->autordestinatarioArchivo;
-    //return Lista_archivo::find('29')->archivosDesdeCamino;
-    return view('Principal.home');
-})->name('inicial');
+Auth::routes();
 
+Route::get('/', [App\Http\Controllers\PrincipalController::class, 'index'])->name('home');
 
 Route::group(['prefix' => 'archivo'], function () {
     Route::get('/', [ArchivoController::class, 'index'])->name('archivo.list');
@@ -78,7 +75,7 @@ Route::group(['prefix' => 'nomencl'], function () {
     })->name('provincia');
 })->name('nomencl');
 
-Auth::routes();
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -94,4 +91,4 @@ Route::middleware('auth')->group(function () {
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
