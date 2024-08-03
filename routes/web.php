@@ -20,9 +20,16 @@ use App\Models\Lista_archivo;
 use App\Models\Procedencia;
 
 
-Auth::routes();
 
-Route::get('/', [App\Http\Controllers\PrincipalController::class, 'index'])->name('home');
+
+Route::get('/', [App\Http\Controllers\PrincipalController::class, 'login'])->name('login2');
+
+
+//require __DIR__.'/auth.php';
+
+Route::get('/inicio', [App\Http\Controllers\PrincipalController::class, 'index'])->name('inicio');
+
+
 
 Route::group(['prefix' => 'archivo'], function () {
     Route::get('/', [ArchivoController::class, 'index'])->name('archivo.list');
@@ -87,8 +94,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//require __DIR__.'/auth.php';
 
+Auth::routes();
 
 
 

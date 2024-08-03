@@ -76,19 +76,30 @@
 
 @section('title') Login @endsection
 
+@section('css_adicional')
+<style>
+ .imgLogin{
+    width: 60%;
+ }
+</style>
+@endsection
+
 @section('main')
 <div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
     <div class="container">
         <div class="login-box bg-white box-shadow border-radius-10">
-        <div class="login-title">
+        <div class="login-title justify-content-center">
             <h2 class="text-center text-primary">Autenticación</h2>
-            <h4 class="text-center text-primary">Secretaria APP</h4>
-        </div>
+            <div class="justify-content-center">
+                <img src="{{ asset('/sitio/images/logo-removebg-preview.png') }}" class="imgLogin" />
+            </div>  
+           
+</div>
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="input-group custom">
-                <input id="email" type="email" name="email" value="{{ old('email') }}" class="form-control form-control-lg @error('email') is-invalid @enderror" placeholder="Correo electrónico" required autocomplete="email" autofocus>
-                <div class="input-group-append custom">
+                <input id="email" type="email" name="email" value="{{ old('email') }}" class="form-control form-control-lg @error('email') is-invalid @enderror"  placeholder="Correo electrónico" required autocomplete="email" autofocus>
+                <div class="input-group-append custom @error('email') d-none @enderror">
                     <span class="input-group-text"><i class="icon-copy dw dw-user1"></i></span>
                 </div>
                 @error('email')
@@ -99,7 +110,7 @@
             </div>
             <div class="input-group custom">
                 <input id="password" type="password" class="form-control form-control-lg @error('email') is-invalid @enderror" placeholder="**********" name="password" required autocomplete="current-password">
-                <div class="input-group-append custom">
+                <div class="input-group-append custom @error('email') d-none @enderror">
                     <span class="input-group-text"><i class="dw dw-padlock1"></i></span>
                 </div>
                 @error('password')

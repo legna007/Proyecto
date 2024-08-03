@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Http\Requests\Auth\LoginRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/inicio';
 
     /**
      * Create a new controller instance.
@@ -37,4 +40,22 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
     }
+
+
+
+    /*public function login(LoginRequest $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::guard('custom')->attempt($credentials, $request->filled('remember'))) {
+            // Custom behavior after successful login using the custom guard
+            return redirect()->intended('/inicio'); // Replace '/dashboard' with your desired route
+        }
+
+        // Handle failed login
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
+    }*/
+
 }

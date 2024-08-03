@@ -10,6 +10,9 @@ class PrincipalController extends Controller
         return view('Principal.home');
     }
 
+    public function login(){
+        return view('auth.login');
+    }
 
 }
     
