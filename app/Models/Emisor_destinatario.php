@@ -7,11 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Emisor_destinatarios extends Model
+class Emisor_destinatario extends Model
 {
     use HasFactory;
 
     protected $fillable =["descripcion","firma_digital","poner_firma"];
+
+    protected $attributes = [
+        'firma_digital' => ''
+    ];
 
 
     public function archivosDesdeAutorDestinatario(): HasMany

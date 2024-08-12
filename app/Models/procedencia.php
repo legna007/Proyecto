@@ -10,8 +10,10 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Procedencia extends Model
 {
     use HasFactory;
-    //protected $table ='procedencias';
-      protected $fillable =["descripciones","activo"];
+
+    protected $table="procedencia";
+
+      protected $fillable =["descripcion","activo"];
       protected $attributes = [
         'activo' => 1
       ];

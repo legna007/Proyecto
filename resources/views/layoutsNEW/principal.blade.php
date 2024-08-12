@@ -22,6 +22,7 @@
 			type="image/png"
 			sizes="16x16"
 			href="{{ asset('vendors/images/favicon-16x16.png') }}"
+			/>
 			
 
 		<!-- Mobile Specific Metas -->

@@ -17,17 +17,17 @@ class Archivos extends Model
 
     public function autordestinatarioArchivo() {
         // $this->hasOne(Pregunta::class, 'id','IDp');
-        return  $this->hasOne(Emisor_destinatarios::class,'id', 'autordestinatario');
+        return  $this->hasOne(Emisor_destinatario::class,'id', 'autordestinatario');
     }
 
     public function getEntregado_por_personas_() {
         // $this->hasOne(Pregunta::class, 'id','IDp');
-        return  $this->hasOne(Emisor_destinatarios::class,'id', 'entregado_por');
+        return  $this->hasOne(Emisor_destinatario::class,'id', 'entregado_por');
     }
 
     public function getRecibido_por_personas() {
         // $this->hasOne(Pregunta::class, 'id','IDp');
-        return  $this->hasOne(Emisor_destinatarios::class,'id', 'recibido_por');
+        return  $this->hasOne(Emisor_destinatario::class,'id', 'recibido_por');
     }
     
     public function getProcedencia_destino() {

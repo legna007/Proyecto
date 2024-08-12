@@ -32,7 +32,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::9T3CQzw3J3kLAH04',
+            '_route' => 'generated::kjTewBJgfpxg1IVb',
           ),
           1 => NULL,
           2 => 
@@ -53,6 +53,26 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'login2',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'dashboard',
           ),
           1 => NULL,
           2 => 
@@ -446,26 +466,6 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'dashboard',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
       '/profile' => 
       array (
         0 => 
@@ -541,7 +541,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::9xlq6viCHggfGr7E',
+            '_route' => 'generated::QmLm4B4dpYdRBeGO',
           ),
           1 => NULL,
           2 => 
@@ -596,7 +596,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::qEf73rXu5Ze9vGC3',
+            '_route' => 'generated::wrDC4jpM360dJywF',
           ),
           1 => NULL,
           2 => 
@@ -687,7 +687,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::xm2sPJUhIzRJaBtW',
+            '_route' => 'generated::2JQPD67X0eDPuuBN',
           ),
           1 => NULL,
           2 => 
@@ -703,11 +703,105 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/password/reset/([^/]++)(*:31))/?$}sDu',
+      0 => '{^(?|/nomenclador/([^/]++)/([^/]++)(?|(?:/([^/]++))?(*:54)|(*:61)|/([^/]++)(?|(*:80)))|/password/reset/([^/]++)(*:113))/?$}sDu',
     ),
     3 => 
     array (
-      31 => 
+      54 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'nomenclador.index',
+            'id' => NULL,
+          ),
+          1 => 
+          array (
+            0 => 'tipo',
+            1 => 'nombre',
+            2 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      61 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'nomenclador.store',
+          ),
+          1 => 
+          array (
+            0 => 'tipo',
+            1 => 'nombre',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      80 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'nomenclador.delete',
+          ),
+          1 => 
+          array (
+            0 => 'tipo',
+            1 => 'nombre',
+            2 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'nomenclador.update',
+          ),
+          1 => 
+          array (
+            0 => 'tipo',
+            1 => 'nombre',
+            2 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      113 => 
       array (
         0 => 
         array (
@@ -781,7 +875,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::9T3CQzw3J3kLAH04' => 
+    'generated::kjTewBJgfpxg1IVb' => 
     array (
       'methods' => 
       array (
@@ -800,7 +894,7 @@ app('router')->setCompiledRoutes(
 
                     return \\Illuminate\\Support\\Facades\\View::file(\'C:\\\\xampp\\\\htdocs\\\\Laravel\\\\secretaria_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\');
                 }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000003220000000000000000";}}',
-        'as' => 'generated::9T3CQzw3J3kLAH04',
+        'as' => 'generated::kjTewBJgfpxg1IVb',
       ),
       'fallback' => false,
       'defaults' => 
@@ -838,6 +932,45 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'login2',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'dashboard' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'verified',
+        ),
+        'uses' => 'App\\Http\\Controllers\\PrincipalController@index',
+        'controller' => 'App\\Http\\Controllers\\PrincipalController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'dashboard',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1556,46 +1689,6 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'dashboard' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'dashboard',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'verified',
-        ),
-        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:46:"function () {
-    return \\view(\'dashboard\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004f90000000000000000";}}',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'dashboard',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
     'profile.edit' => 
     array (
       'methods' => 
@@ -1708,6 +1801,155 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'nomenclador.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'nomenclador/{tipo}/{nombre}/{id?}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\NomenclatureController@index',
+        'controller' => 'App\\Http\\Controllers\\NomenclatureController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'nomenclador.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'nomenclador.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'nomenclador/{tipo}/{nombre}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\NomenclatureController@store',
+        'controller' => 'App\\Http\\Controllers\\NomenclatureController@store',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'nomenclador.store',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'nomenclador.delete' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'nomenclador/{tipo}/{nombre}/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\NomenclatureController@delete',
+        'controller' => 'App\\Http\\Controllers\\NomenclatureController@delete',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'nomenclador.delete',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'nomenclador.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'nomenclador/{tipo}/{nombre}/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'App\\Http\\Controllers\\NomenclatureController@update',
+        'controller' => 'App\\Http\\Controllers\\NomenclatureController@update',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'nomenclador.update',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'login' => 
     array (
       'methods' => 
@@ -1745,7 +1987,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::9xlq6viCHggfGr7E' => 
+    'generated::QmLm4B4dpYdRBeGO' => 
     array (
       'methods' => 
       array (
@@ -1765,7 +2007,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::9xlq6viCHggfGr7E',
+        'as' => 'generated::QmLm4B4dpYdRBeGO',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1854,7 +2096,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::qEf73rXu5Ze9vGC3' => 
+    'generated::wrDC4jpM360dJywF' => 
     array (
       'methods' => 
       array (
@@ -1874,7 +2116,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::qEf73rXu5Ze9vGC3',
+        'as' => 'generated::wrDC4jpM360dJywF',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2073,7 +2315,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::xm2sPJUhIzRJaBtW' => 
+    'generated::2JQPD67X0eDPuuBN' => 
     array (
       'methods' => 
       array (
@@ -2093,7 +2335,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::xm2sPJUhIzRJaBtW',
+        'as' => 'generated::2JQPD67X0eDPuuBN',
       ),
       'fallback' => false,
       'defaults' => 

@@ -24,6 +24,7 @@ use App\Models\Procedencia;
 
 Route::get('/', [App\Http\Controllers\PrincipalController::class, 'login'])->name('login2');
 
+Route::get('/dashboard', [App\Http\Controllers\PrincipalController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 //require __DIR__.'/auth.php';
 
@@ -84,9 +85,7 @@ Route::group(['prefix' => 'nomencl'], function () {
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -94,7 +93,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
+Route::get('/nomenclador/{tipo}/{nombre}/{id?}', [App\Http\Controllers\NomenclatureController::class,'index'] )->name('nomenclador.index')->middleware('auth');
+Route::post('/nomenclador/{tipo}/{nombre}', [App\Http\Controllers\NomenclatureController::class,'store'] )->name('nomenclador.store')->middleware('auth');
+Route::delete('/nomenclador/{tipo}/{nombre}/{id}', [App\Http\Controllers\NomenclatureController::class,'delete'] )->name('nomenclador.delete')->middleware('auth');
+Route::put('/nomenclador/{tipo}/{nombre}/{id}', [App\Http\Controllers\NomenclatureController::class,'update'] )->name('nomenclador.update')->middleware('auth');
 Auth::routes();
 
 

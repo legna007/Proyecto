@@ -1,8 +1,8 @@
 <div class="left-side-bar">
     <div class="brand-logo">
         <a href="index.html">
-            <img src="{{ asset('vendors/images/deskapp-logo.svg') }}" alt="" class="dark-logo">
-            <img src="{{ asset('vendors/images/deskapp-logo-white.svg') }}"alt="" class="light-logo">
+            {{--<img src="{{ asset('/sitio/images/secrebufete.png') }}" alt="" class="dark-logo">--}}
+            <img src="{{ asset('/sitio/images/secrebufete.png') }}" alt="" class="light-logo" />
         </a>
         <div class="close-sidebar" data-toggle="left-sidebar-close">
             <i class="ion-close-round"></i>
@@ -27,11 +27,16 @@
                     </a>
                     <ul class="submenu">
                         <li><a href="{{route('cargo.list')}}">Cargo</a></li>
-                        <li><a href="{{route('emisordestinatario.list')}}">Emisor destinatario</a></li>
-                        <li><a href="{{route('posicion.list')}}">Posición en Archivo</a></li>
-                        <li><a href="{{route('procedencia.list')}}">Procedencia o Destino</a></li>
-                        <li><a href="{{route('listaarchivo.list')}}">Lista de Archivos ONBC</a></li>
-                        <li><a href="{{route('provincia.list')}}">Provincia</a></li>
+                        {{--<li><a href="{{route('emisordestinatario.list')}}">Emisor destinatario</a></li>--}}
+                        <li><a href="{{route('nomenclador.index', ['tipo'=>'Emisor_destinatario','nombre'=>'Emisor destinatario'])}}">Emisor destinatario</a></li>
+                        {{--<li><a href="{{route('posicion.list')}}">Posición en Archivo</a></li>--}}
+                        <li><a href="{{route('nomenclador.index', ['tipo'=>'Posicion_En_Archivo','nombre'=>'Posicion en Archivo'])}}">Posición en Archivo</a></li>
+                        {{--<li><a href="{{route('procedencia.list')}}">Procedencia o Destino</a></li>--}}
+                        <li><a href="{{route('nomenclador.index', ['tipo'=>'Procedencia','nombre'=>'Procedencia'])}}">Procedencia o Destino</a></li>
+                        {{--<li><a href="{{route('listaarchivo.list')}}">Lista de Archivos ONBC</a></li>--}}
+                        <li><a href="{{route('nomenclador.index', ['tipo'=>'Lista_archivo','nombre'=>'Lista archivo'])}}">Lista de Archivos ONBC</a></li>
+                        {{--<li><a href="{{route('provincia.list')}}">Provincia</a></li>--}}
+                        <li><a href="{{route('nomenclador.index', ['tipo'=>'Provincia','nombre'=>'Provincia'])}}">Provincia</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
